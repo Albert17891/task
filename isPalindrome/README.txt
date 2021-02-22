@@ -1,0 +1,1 @@
+It's a function which check a sentence is palindrome or not.

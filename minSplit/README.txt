@@ -1,0 +1,1 @@
+It's function which gets coins  and returns minimal amount which we can it small change

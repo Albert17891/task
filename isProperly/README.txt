@@ -1,0 +1,1 @@
+This fuction gets braces and returns that it's true mathematically or not.
