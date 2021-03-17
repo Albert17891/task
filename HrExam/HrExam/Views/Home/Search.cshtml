@@ -1,0 +1,51 @@
+﻿@model IEnumerable<employee>
+
+
+<h4 class="bg-primary text-white text-center p-2">თანამშრომლები</h4>
+<table class="table table-sm table-bordered table-striped">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <th>პირადი ნომერი</th>
+            <th>სახელი</th>
+            <th>გვარი</th>
+            <th>სქესი</th>
+            <th>დაბადების თარიღი</th>
+            <th>თანამდეობა</th>
+            <th>სტატუსი</th>
+            <th>გათავისუფლების თარიღი </th>
+            <th>მობილური</th>
+            <th>
+
+
+            </th>
+        </tr>
+    </tbody>
+    <tbody>
+
+        @foreach (employee e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.number.ToString()</td>
+                <td>@e.Name</td>
+                <td>@e.SurName</td>
+                <td>@e.Gender</td>
+                <td>@e.Bdate</td>
+                <td>@e.position</td>
+                <td>@e.status</td>
+                <td>@e.timeoffwork</td>
+                <td>@e.Mphone</td>
+                <td class="text-center">
+
+                    <a asp-action="Index" 
+                       class="btn btn-sm btn-secondary">უკან</a>
+                    
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+        </p>

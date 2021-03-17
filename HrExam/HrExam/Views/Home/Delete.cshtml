@@ -1,0 +1,81 @@
+﻿
+@model employee
+
+
+
+<h4 class="bg-primary text-white text-center p-2">წაშლა</h4>
+<form asp-action="Deletet" method="post"  new { onsubmit = "return confirm('ნამდვილად გსურთ წაშლა?');"}>
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input class="form-control" asp-for="Id" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="number"></label>
+        <div>
+            <span asp-validation-for="number" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="number" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SurName"></label>
+        <div>
+            <span asp-validation-for="SurName" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="SurName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <label>მამრობითი</label>
+        <input checked="checked" id="Gender" name="Gender" type="radio" value="მმ" />
+        <label>მდედრობითი</label>
+        <input id="Gender" name="Gender" type="radio" value="მდ" />
+        <span asp-validation-for="Gender"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bdate"></label>
+        <div>
+            <span asp-validation-for="Bdate" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="Bdate" />
+    </div>
+    <div class="form-group">
+        <label asp-for="position"></label>
+        <div>
+            <span asp-validation-for="position" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="position" />
+    </div>
+    <div class="form-group">
+        <label asp-for="status"></label>
+        <label>შტატში</label>
+        <input checked="checked" id="status" name="status" type="radio" value="შტატში" />
+        <label>შტატგარეშე</label>
+        <input id="status" name="status" type="radio" value="შტატგარეშე" />
+        <label>გათავისებული</label>
+        <input id="status" name="status" type="radio" value="გათავისებული" />
+        <span asp-validation-for="status"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="timeoffwork"></label>
+        <div>
+            <span asp-validation-for="timeoffwork" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="timeoffwork" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Mphone"></label>
+        <div>
+            <span asp-validation-for="Mphone" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="Mphone" />
+    </div>
+    <button class="btn btn-primary " type="submit"  >წაშლა</button>
+    <a class="btn btn-secondary" asp-action="Index">უკან</a>
+</form>

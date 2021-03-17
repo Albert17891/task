@@ -1,0 +1,56 @@
+﻿@model registersModel
+
+
+
+<h5 class="bg-primary text-white text-center p-2">რეგისტრაცია</h5>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label asp-for="number"></label>
+        <input asp-for="@Model.number" />
+        <span asp-validation-for="number"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input asp-for="@Model.UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SurName"></label>
+        <input asp-for="@Model.SurName" />
+        <span asp-validation-for="SurName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <label>მამრობითი</label>
+        <input checked="checked" id="Gender" name="Gender" type="radio" value="Male"  />
+        <label>მდედრობითი</label>
+        <input  id="Gender" name="Gender" type="radio" value="Female" />
+        <span asp-validation-for="Gender"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="dateTime"></label>
+        <input asp-for="@Model.dateTime" />
+        <span asp-validation-for="dateTime"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="@Model.Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="@Model.Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="@Model.ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <input type="submit" value="რეგისტრაცია" />
+    </div>
+
+</form>
