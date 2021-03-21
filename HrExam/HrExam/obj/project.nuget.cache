@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7FpH21bUj1ow9EyIFeZ2Oo7ncX3NbOf+gVHIlNWRzQxc4hG7Y8GuCE8+30LDg/NEQb2xd08QVbbge4ROln9Fyw==",
+  "dgSpecHash": "mFVpMt8tmdKPmKsmvU5g4zVdX3zrNh5HCUFfGuBSTHTynh9ct75xxBWMvrpcgMsynu2ZWKexC36zL2+o2VyXdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ABO\\source\\repos\\HrExam\\HrExam\\HrExam.csproj",
+  "projectFilePath": "C:\\Users\\ABO\\repo\\HrExam\\HrExam\\HrExam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ABO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ABO\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

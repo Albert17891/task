@@ -29,7 +29,7 @@ namespace HrExam.Controllers
 
 
 
-            HttpResponseMessage Res = await client.GetAsync("api/Values" );
+            HttpResponseMessage Res = await client.GetAsync("api/CRUDWeb");
 
 
             if (Res.IsSuccessStatusCode)
@@ -55,7 +55,7 @@ namespace HrExam.Controllers
 
 
 
-            HttpResponseMessage Res = await client.GetAsync("api/Values/ser/"+search);
+            HttpResponseMessage Res = await client.GetAsync("api/CRUDWeb/ser/" + search);
 
 
             if (Res.IsSuccessStatusCode)
@@ -89,7 +89,7 @@ namespace HrExam.Controllers
 
             client.BaseAddress = new Uri(Baseurl);
 
-            HttpResponseMessage Res = await client.PostAsJsonAsync("api/Values", emp);
+            HttpResponseMessage Res = await client.PostAsJsonAsync("api/CRUDWeb", emp);
             if (Res.IsSuccessStatusCode)
             {
                
@@ -112,7 +112,7 @@ namespace HrExam.Controllers
 
             client.BaseAddress = new Uri(Baseurl);
 
-            var Res =  client.GetAsync("api/Values/"+id).Result;
+            var Res =  client.GetAsync("api/CRUDWeb/" + id).Result;
 
             
             
@@ -137,7 +137,7 @@ namespace HrExam.Controllers
 
             client.BaseAddress = new Uri(Baseurl);
 
-            var Res =  client.PutAsJsonAsync<employee>("api/Values", emp);
+            var Res =  client.PutAsJsonAsync<employee>("api/CRUDWeb", emp);
 
             var Emp = Res.Result;
 
@@ -156,7 +156,7 @@ namespace HrExam.Controllers
 
             client.BaseAddress = new Uri(Baseurl);
 
-            HttpResponseMessage Res = client.GetAsync("api/Values/" + id).Result;
+            HttpResponseMessage Res = client.GetAsync("api/CRUDWeb/" + id).Result;
 
             if (Res.IsSuccessStatusCode)
             {
@@ -177,7 +177,7 @@ namespace HrExam.Controllers
 
             client.BaseAddress = new Uri(Baseurl);
 
-            var Res = client.DeleteAsync("api/Values/" + id);
+            var Res = client.DeleteAsync("api/CRUDWeb/" + id);
             Res.Wait();
 
             var Emp = Res.Result;

@@ -8945,11 +8945,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ABO\\source\\repos\\HrExam\\HrExam\\HrExam.csproj",
+      "projectUniqueName": "C:\\Users\\ABO\\repo\\HrExam\\HrExam\\HrExam.csproj",
       "projectName": "HrExam",
-      "projectPath": "C:\\Users\\ABO\\source\\repos\\HrExam\\HrExam\\HrExam.csproj",
+      "projectPath": "C:\\Users\\ABO\\repo\\HrExam\\HrExam\\HrExam.csproj",
       "packagesPath": "C:\\Users\\ABO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ABO\\source\\repos\\HrExam\\HrExam\\obj\\",
+      "outputPath": "C:\\Users\\ABO\\repo\\HrExam\\HrExam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ABO\\AppData\\Roaming\\NuGet\\NuGet.Config",
