@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrExam", "HrExam\HrExam.csproj", "{DBD887A3-2643-4B3E-B395-580DC7CF0D87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUDWebService", "CRUDWebService\CRUDWebService.csproj", "{B412D718-047F-4637-B06D-EA128E34C1E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrApi", "HrApi\HrApi.csproj", "{4B779EC4-912F-4FC4-8031-41B513728CEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{DBD887A3-2643-4B3E-B395-580DC7CF0D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBD887A3-2643-4B3E-B395-580DC7CF0D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBD887A3-2643-4B3E-B395-580DC7CF0D87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B412D718-047F-4637-B06D-EA128E34C1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B412D718-047F-4637-B06D-EA128E34C1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B412D718-047F-4637-B06D-EA128E34C1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B412D718-047F-4637-B06D-EA128E34C1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B779EC4-912F-4FC4-8031-41B513728CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B779EC4-912F-4FC4-8031-41B513728CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B779EC4-912F-4FC4-8031-41B513728CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B779EC4-912F-4FC4-8031-41B513728CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
