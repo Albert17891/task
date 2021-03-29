@@ -1,4 +1,4 @@
-﻿@model IEnumerable<employee>
+﻿@model IEnumerable<Employee>
 
 
 <h4 class="bg-primary text-white text-center p-2">თანამშრომლები</h4>
@@ -23,7 +23,7 @@
     </tbody>
     <tbody>
 
-        @foreach (employee e in Model)
+        @foreach (Employee e in Model)
         {
             <tr>
                 <td>@e.Id</td>

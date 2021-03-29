@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-namespace HrExam.ViewModel
+
+namespace HrExam.RegisterViewModel
 {
     public class loginModel
     {

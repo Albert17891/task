@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using HrExam.Models;
-using HrExam.ViewModel;
+using HrExam.RegisterViewModel;
 
 namespace HrExam.Controllers
 {

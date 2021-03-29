@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HrExam.EmployeeModel
 {
-    public class employee
+    public class Employee
     {
         public int Id { get; set; }
         [Required(ErrorMessage ="Please enter Id number")]

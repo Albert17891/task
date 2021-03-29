@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using HrExam.EmployeeModel;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http.Json;
-
+using HrExam.EmployeeModel;
 
 
 
@@ -20,14 +19,12 @@ namespace HrExam.Controllers
         string Baseurl = "http://localhost:57389";
         HttpClient client = new HttpClient();
 
-
+        //Connects by Server And gets All Employees Information
         public async Task<IActionResult> Index()
         {
-            List<employee> EmpInfo = new List<employee>();
+            List<Employee> EmpInfo = new List<Employee>();
 
             client.BaseAddress = new Uri(Baseurl);
-
-
 
             HttpResponseMessage Res = await client.GetAsync("api/CRUDWeb");
 
@@ -37,8 +34,7 @@ namespace HrExam.Controllers
 
                 var EmpResponse = Res.Content.ReadAsStringAsync().Result;
 
-
-                EmpInfo = JsonConvert.DeserializeObject<List<employee>>(EmpResponse);
+                EmpInfo = JsonConvert.DeserializeObject<List<Employee>>(EmpResponse);
 
             }
 
@@ -46,10 +42,10 @@ namespace HrExam.Controllers
 
         }
 
-        
+        //Connects by Server And gets Employees using  Name and Last Name
         public async Task<IActionResult> Search(string search)
         {
-            List<employee> EmpInfo = new List<employee>();
+            List<Employee> EmpInfo = new List<Employee>();
 
             client.BaseAddress = new Uri(Baseurl);
 
@@ -64,7 +60,7 @@ namespace HrExam.Controllers
                 var EmpResponse = Res.Content.ReadAsStringAsync().Result;
 
 
-                EmpInfo = JsonConvert.DeserializeObject<List<employee>>(EmpResponse);
+                EmpInfo = JsonConvert.DeserializeObject<List<Employee>>(EmpResponse);
 
             }
 
@@ -74,16 +70,17 @@ namespace HrExam.Controllers
         }
 
 
+        //Create new Employee
 
-
-            public IActionResult Create()
+        public IActionResult Create()
         {
             return View("Create");
         }
 
 
+        //Create new Employee
         [HttpPost]
-        public async Task<IActionResult> Create(employee emp)
+        public async Task<IActionResult> Create(Employee emp)
         {
            
 
@@ -104,11 +101,11 @@ namespace HrExam.Controllers
             return View("Create");
         }
 
-        
+        //Edit Information of Employee 
         public ActionResult Edit(int id)
         {
            
-            employee emp = new employee();
+            Employee emp = new Employee();
 
             client.BaseAddress = new Uri(Baseurl);
 
@@ -120,7 +117,7 @@ namespace HrExam.Controllers
             {
                  var EmpPutREsponse =Res.Content.ReadAsStringAsync().Result;
              
-               emp = JsonConvert.DeserializeObject<employee>(EmpPutREsponse);         
+               emp = JsonConvert.DeserializeObject<Employee>(EmpPutREsponse);         
                            
 
 
@@ -129,15 +126,15 @@ namespace HrExam.Controllers
         }
 
 
-
+        //Edit Information of Employee
         [HttpPost]
-        public  IActionResult Edit(employee emp)
+        public  IActionResult Edit(Employee emp)
         {
             
 
             client.BaseAddress = new Uri(Baseurl);
 
-            var Res =  client.PutAsJsonAsync<employee>("api/CRUDWeb", emp);
+            var Res =  client.PutAsJsonAsync<Employee>("api/CRUDWeb", emp);
 
             var Emp = Res.Result;
 
@@ -149,9 +146,11 @@ namespace HrExam.Controllers
             return View(emp);
         }
 
+
+        //Delete Employee
         public IActionResult Delete(int id)
         {
-            employee emp = new employee();
+            Employee emp = new Employee();
 
 
             client.BaseAddress = new Uri(Baseurl);
@@ -161,7 +160,7 @@ namespace HrExam.Controllers
             if (Res.IsSuccessStatusCode)
             {
                 var result = Res.Content.ReadAsStringAsync().Result;
-                emp = JsonConvert.DeserializeObject<employee>(result);
+                emp = JsonConvert.DeserializeObject<Employee>(result);
             }
 
 
@@ -169,7 +168,7 @@ namespace HrExam.Controllers
 
         }
 
-
+        //Delete Employee
         [HttpPost]
         public IActionResult Deletet(int id)
         {
