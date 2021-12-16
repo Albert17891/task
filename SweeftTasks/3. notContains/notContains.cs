@@ -7,7 +7,7 @@
                 if (array[i] > 0 && array[i]<min)
                 {
                     min = array[i];
-                    Console.WriteLine(min);
+                    
                 }
             }
             

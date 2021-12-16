@@ -2,7 +2,7 @@
 
 Go
 
-Select TeacherId
+Select TeacherID
 
 From dbo.Teacher,dbo.Pupil
 
